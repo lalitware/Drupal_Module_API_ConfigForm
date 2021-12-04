@@ -1,0 +1,26 @@
+node_json_data.admin_settings:
+  path: '/admin/config/node_json_data'
+  defaults:
+    _form: '\Drupal\node_json_data\Form\ModuleConfigurationForm'
+    _title: 'Node JSON Data configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
+
+node_json_data.settings:
+  path: '/admin/config/node_json_data/settings'
+  defaults:
+    _form: '\Drupal\example\Form\ModuleConfigurationForm'
+    _title: 'API'
+  requirements:
+    _permission: 'administer site configuration'
+
+node_json_data.api_controller:
+  path: '/data/{enteredApi}/{enteredId}'
+  defaults:
+    _controller: '\Drupal\node_json_data\Controller\ApiController::index'
+    _title: 'External API Key'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+

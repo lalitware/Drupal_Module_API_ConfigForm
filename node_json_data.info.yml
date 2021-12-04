@@ -1,0 +1,8 @@
+name: Node JSON Data
+description: For returning the JSON data on the node.
+package: Node JSON Data
+type: module
+version: 1.0
+core: 8.x
+core_version_requirement: ^8||^9
+configure: node_json_data.admin_settings
